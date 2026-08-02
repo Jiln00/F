@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>九龍哀歌</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@200;300;400;600;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" crossorigin="anonymous">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+  <!-- Compiled CSS (Tailwind Preflight + Custom) -->
+  <style>
+/*! tailwindcss v4.3.2 | MIT License | https://tailwindcss.com */
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-border-style:solid;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.flex{display:flex}.hidden{display:none}.flex-shrink{flex-shrink:1}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.flex-wrap{flex-wrap:wrap}.border{border-style:var(--tw-border-style);border-width:1px}.ring{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}}:root{--bg:#07080a;--bg-alt:rgba(255, 255, 255, 0.05);--panel:#0e101294;--panel-solid:#101214;--line-soft:#e4e2dc14;--ink:#6e2430;--ink-bright:#9c3d49;--gold:#c1904f;--jade:#45525c;--jade-bright:#7a8b96;--text:#e7e4dc;--text-dim:#99988f;--text-faint:#64635c;--serif:"Song Myung", "Noto Serif KR", serif;--serif-head:"Nanum Myeongjo", "Noto Serif KR", serif;--sans:"Pretendard Variable", "Pretendard", "Noto Sans KR", sans-serif}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--sans);letter-spacing:.01em;cursor:none;min-height:100vh;line-height:1.7;overflow-x:hidden}a,button,.sc-card,.cs-box.interactive{cursor:none}.cursor-dot{background:var(--gold);pointer-events:none;z-index:9999;border-radius:50%;width:6px;height:6px;position:fixed;top:0;left:0;transform:translate(-50%,-50%)}.cursor-ring{pointer-events:none;z-index:9998;border-radius:50%;width:48px;height:48px;transition:width .3s,height .3s;position:fixed;top:0;left:0;transform:translate(-50%,-50%)}.cursor-ring:before,.cursor-ring:after{content:"";background:#c1904fb3;transition:background .3s;position:absolute}.cursor-ring:before{height:1.5px;top:50%;left:0;right:0;transform:translateY(-50%)}.cursor-ring:after{width:1.5px;top:0;bottom:0;left:50%;transform:translate(-50%)}.cursor-ring .circle{border:1.5px solid #c1904f80;border-radius:50%;transition:border-color .3s,inset .3s;position:absolute;inset:8px}body.cursor-hover .cursor-ring{width:60px;height:60px}body.cursor-hover .cursor-ring:before,body.cursor-hover .cursor-ring:after{background:#e7e4dccc}body.cursor-hover .cursor-ring .circle{background:#c1904f1a;border-color:#e7e4dc80;inset:12px}body:before{content:"";z-index:-2;pointer-events:none;filter:blur(5px);opacity:.4;background:url(https://raw.githubusercontent.com/Jiln00/F/main/%EB%B0%B0%EA%B2%BD.jpg) 50%/cover no-repeat;position:fixed;inset:0}body:after{content:"";z-index:-1;pointer-events:none;background:radial-gradient(70% 40% at 15% 0,#6e243000,#0000 60%);position:fixed;inset:0}::selection{background:var(--ink);color:#fff}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}h1,h2,h3,h4{font-family:var(--serif-head);letter-spacing:-.01em;font-weight:800}.wrap{max-width:1180px;margin:0 auto;padding:0 28px}section{padding:150px 0 130px;position:relative}.eyebrow{font-family:var(--serif);letter-spacing:.35em;color:var(--gold);text-transform:uppercase;align-items:center;gap:10px;margin-bottom:22px;font-size:13px;display:inline-flex}.eyebrow:before{content:"";background:var(--gold);width:22px;height:1px}.section-title{color:#f2ede1;margin-bottom:18px;font-size:clamp(28px,4vw,44px)}.section-lead{color:var(--text-dim);max-width:640px;margin-bottom:56px;font-size:16px}.edge-top{position:relative}.edge-top:before,.edge-left:before{display:none}.glass{background:var(--panel);-webkit-backdrop-filter:blur(14px);border-radius:2px;position:relative}#nav{z-index:200;background:linear-gradient(180deg, rgba(7, 8, 10, 0.6) 0%, rgba(7, 8, 10, 0.1) 100%);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255, 255, 255, 0.05);position:fixed;top:0;left:0;right:0}#nav:after{display:none}.nav-inner{justify-content:space-between;align-items:center;max-width:1180px;height:76px;margin:0 auto;padding:0 28px;display:flex}.brand{font-family:var(--serif);letter-spacing:.14em;color:#f2ede1;font-size:20px}.nav-links{align-items:center;gap:34px;display:flex}.nav-links a{color:var(--text-dim);letter-spacing:.04em;text-align:center;flex-direction:column;gap:4px;font-size:13.5px;transition:color .25s;display:flex;position:relative}.nav-links a .kr{color:var(--text-faint);letter-spacing:.04em;font-size:14px}.nav-links a .hz{color:var(--text-dim);letter-spacing:.12em;font-size:13px;font-family:var(--serif-head)}.nav-links a:hover,.nav-links a.active{color:var(--text)}.nav-links a:hover .hz,.nav-links a.active .hz{color:#f2ede1}.nav-links a:hover .kr,.nav-links a.active .kr{color:var(--gold)}.nav-links a.active:after{content:"";background:linear-gradient(90deg, var(--ink-bright), var(--gold));height:1px;position:absolute;bottom:-10px;left:0;right:0}.nav-right{align-items:center;gap:20px;display:flex}.hamburger{background:0 0;border:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:34px;height:34px;display:none}.hamburger span{background:var(--text);width:22px;height:1px;display:block}#bgm{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);background:#0006;border:1px solid #ffffff1a;border-radius:40px;align-items:center;padding:6px 14px 6px 16px;display:flex;position:relative}#bgm .bgm-label{font-family:var(--serif);color:var(--gold);letter-spacing:.15em;align-items:center;margin-right:12px;font-size:13px;display:flex}#bgm button#bgmToggle{color:var(--text);cursor:pointer;background:0 0;border:none;justify-content:center;align-items:center;width:20px;height:20px;margin-right:8px;font-size:11px;transition:color .2s;display:flex}#bgm button#bgmToggle:hover{color:var(--gold)}#bgm .bgm-panel{align-items:center;width:60px;display:flex}#bgm input[type=range]{appearance:none;background:#ffffff26;border-radius:1px;outline:none;width:100%;height:2px}#bgm input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;background:var(--gold);cursor:pointer;border-radius:50%;width:8px;height:8px;transition:transform .2s}#bgm input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.3)}#main{text-align:center;flex-direction:column;justify-content:center;align-items:center;min-height:100vh;padding:160px 0 60px;display:flex;position:relative;overflow:hidden}.hero-bg{z-index:0;background:0 0;position:absolute;inset:0;overflow:hidden}.hero-bg svg{z-index:1;width:100%;height:62%;position:absolute;bottom:0;left:0;display:none!important}.rain{z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect x='10' y='0' width='1.5' height='25' fill='rgba(255,255,255,0.08)'/%3E%3Crect x='60' y='40' width='2' height='35' fill='rgba(255,255,255,0.12)'/%3E%3Crect x='40' y='90' width='1' height='20' fill='rgba(255,255,255,0.06)'/%3E%3Crect x='100' y='20' width='1' height='15' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect x='30' y='20' width='1.5' height='30' fill='rgba(255,255,255,0.07)'/%3E%3Crect x='90' y='110' width='2' height='45' fill='rgba(255,255,255,0.15)'/%3E%3Crect x='150' y='40' width='1.5' height='25' fill='rgba(255,255,255,0.05)'/%3E%3Crect x='180' y='150' width='1' height='15' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E");background-size:120px 120px,200px 200px;animation:.4s linear infinite rain-fall;position:absolute;inset:-20%;transform:rotate(14deg)}@keyframes rain-fall{0%{background-position:0 0,0 0}to{background-position:0 120px,0 200px}}@media (prefers-reduced-motion:reduce){.rain:before,.rain:after{animation:none}}.hero-content{z-index:3;position:relative}.hero-year{font-family:var(--serif);letter-spacing:.5em;color:var(--gold);text-transform:uppercase;margin-bottom:26px;font-size:13px}.hero-title-wrapper{margin-bottom:24px;padding:10px 20px;display:inline-block;position:relative}.hero-title-wrapper:before,.hero-title-wrapper:after{display:none}.hero-title{font-family:"Noto Serif TC", var(--serif-head);color:#f2f0e2;letter-spacing:-2px;z-index:2;text-shadow:none;-webkit-text-stroke:1.5px #f2f0e2;margin-left:0;font-size:105px;font-weight:900;line-height:1.2;position:relative}.hero-title .accent{color:var(--ink-bright)}.hero-sub{font-family:var(--serif);color:var(--text-dim);letter-spacing:.3em;margin-bottom:44px;margin-left:.3em;font-size:clamp(14px,1.8vw,17px);font-weight:300}.scroll-hint{letter-spacing:.3em;color:var(--text-faint);z-index:3;flex-direction:column;align-items:center;gap:10px;margin-top:46px;font-size:11px;display:flex;position:relative}#world p.desc{color:var(--text-dim);max-width:680px;margin-bottom:20px;font-size:16.5px}#world p.desc b{color:var(--text);font-weight:500}.fact-grid{grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px;display:grid}.fact-grid .fact{background:var(--bg-alt);text-align:left;-webkit-backdrop-filter:blur(10px);border-radius:4px;padding:28px 26px;position:relative;border:1px solid rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.3)}.fact-grid .fact:before{display:none}.fact-grid .fact .label{letter-spacing:.3em;color:var(--gold);font-size:11px;font-family:var(--serif-head);margin-bottom:10px}.fact-grid .fact .value{color:var(--text);font-size:14.5px;line-height:1.55}.org-grid{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:18px;display:grid}.faction-card{background:var(--bg-alt);-webkit-backdrop-filter:blur(10px);border-radius:4px;flex-direction:column;justify-content:center;min-height:180px;padding:42px 34px;transition:background .3s;display:flex;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.3)}.faction-card:hover{background:#15171099}.faction-card h4{color:var(--text-faint);font-size:15px;font-family:var(--sans);align-items:baseline;gap:8px;margin-bottom:8px;display:flex}.faction-card h4 .hz{color:#f2ede1;font-size:22px;font-weight:400;font-family:var(--serif-head)}.faction-card p{color:var(--text-dim);font-size:14.5px;line-height:1.6}.faction-card.dim{opacity:.85}#cross-section .section-title{font-family:var(--serif-head);margin-bottom:24px;font-size:clamp(32px,5vw,54px)}#cross-section .section-lead{max-width:720px;margin-bottom:60px;font-size:15px;line-height:1.8}.cs-board{-webkit-backdrop-filter:blur(10px);background:rgba(255,255,255,0.03);box-shadow:0 8px 32px rgba(0,0,0,0.3);border:1px solid #ffffff0f;border-radius:2px;flex-direction:column;display:flex}.cs-row{border-bottom:1px solid #ffffff0a;min-height:90px;display:flex}.cs-row:last-child{border-bottom:none}.cs-floor{width:140px;font-family:var(--sans);color:var(--gold);border-right:1px solid #ffffff0a;flex-shrink:0;justify-content:center;align-items:center;font-size:16px;font-weight:600;display:flex}.cs-places{flex-wrap:wrap;flex:1;align-items:center;gap:16px;padding:24px 40px;display:flex}.cs-box{color:var(--text-faint);font-size:14.5px;font-family:var(--sans);-webkit-backdrop-filter:blur(8px);background:rgba(255,255,255,0.04);box-shadow:0 4px 16px rgba(0,0,0,0.2);border:1px solid #ffffff1a;border-radius:4px;justify-content:center;align-items:center;gap:8px;min-width:150px;min-height:56px;padding:18px 28px;transition:all .4s cubic-bezier(.2,0,0,1);display:flex;position:relative;overflow:hidden}.cs-box:hover{border-color:#c1904f66}.cs-box .hz{color:#f2ede1;opacity:1;font-size:17px;font-family:var(--serif);margin-right:4px;transition:color .4s}.cs-box:hover .hz{color:var(--gold)}.cs-box.interactive{background:#c1904f08;border:1.5px solid #c1904f73}.cs-box.interactive:hover, .cs-box.interactive.active{background:#c1904f1f;border:1.5px solid #c1904fe6;box-shadow:0 0 15px #c1904f26}.cs-box-default{justify-content:center;align-items:center;width:100%;transition:transform .4s cubic-bezier(.2,0,0,1),opacity .4s;display:flex}.cs-box-hover{font-family:var(--sans);text-align:center;color:#f2ede1;opacity:0;word-break:keep-all;overflow-wrap:anywhere;word-break:break-word;justify-content:center;align-items:center;padding:0 8px;font-size:13.5px;line-height:1.3;transition:transform .4s cubic-bezier(.2,0,0,1),opacity .4s;display:flex;position:absolute;inset:0;transform:translateY(100%)}.cs-box.interactive:hover .cs-box-default, .cs-box.interactive.active .cs-box-default{opacity:0;transform:translateY(-100%)}.cs-box.interactive:hover .cs-box-hover, .cs-box.interactive.active .cs-box-hover{opacity:1;transform:translateY(0)}.places-grid{grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px;display:grid}.place-card{background:var(--bg-alt);-webkit-backdrop-filter:blur(10px);border-radius:4px;padding:32px 36px;transition:background .3s;border:1px solid rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.3)}.place-card:hover{background:#12140f99}.place-card h4{color:var(--text-faint);font-size:15px;font-family:var(--sans);align-items:baseline;gap:8px;margin-bottom:12px;display:flex}.place-card h4 .hz{color:#f2ede1;font-size:20px;font-weight:400;font-family:var(--serif-head)}.place-card p{color:var(--text-dim);font-size:14.5px;line-height:1.7}.char-feature{grid-template-columns:340px 1fr;gap:0;margin-bottom:70px;display:grid}.char-portrait{background:0 0;height:100%;min-height:460px;position:relative;overflow:hidden}.char-portrait .caption{letter-spacing:.2em;color:var(--text-faint);z-index:2;background:linear-gradient(#0000,#0009);padding:18px 22px;font-size:11px;position:absolute;bottom:0;left:0;right:0}.char-info{background:var(--panel);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);padding:38px 44px;position:relative}.role-hover-swap{cursor:pointer;display:inline-block;position:relative}.role-hover-swap .role-default{transition:opacity .4s}.role-hover-swap .role-hover{opacity:0;white-space:nowrap;color:#c33;transition:opacity .4s;position:absolute;top:0;left:0}.role-hover-swap:hover .role-default{opacity:0}.role-hover-swap:hover .role-hover{opacity:1}.char-meta{flex-wrap:wrap;gap:24px;margin-bottom:24px;display:flex}.char-meta div{color:var(--text-faint);font-size:12px}.char-meta div b{font-family:var(--serif);color:var(--text);margin-top:4px;font-size:17px;font-weight:400;display:block}.char-section-divider{background:#ffffff0f;height:1px;margin:36px 0}.detail-title{font-family:var(--serif-head);color:#f2ede1;margin-bottom:20px;font-size:19px;font-weight:700}.detail-boxes{flex-wrap:wrap;gap:12px;display:flex}.d-box{color:var(--text-dim);background:rgba(255,255,255,0.04);box-shadow:0 4px 16px rgba(0,0,0,0.15);border:1px solid #ffffff0d;border-radius:2px;padding:13px 22px;font-size:14.5px}.detail-desc{color:var(--text-dim);word-break:keep-all;font-size:15px;line-height:1.8}.sc-grid{grid-template-columns:repeat(4,1fr);gap:24px;display:grid}.sc-card{flex-direction:column;gap:16px;display:flex}.sc-image{aspect-ratio:3/4;-webkit-backdrop-filter:blur(8px);background:#10121173;border:1px dashed #ffffff14;justify-content:center;align-items:center;display:flex;position:relative;overflow:hidden}.sc-img-text{transition:opacity .6s,transform .6s cubic-bezier(.2,0,0,1);position:absolute}.sc-img-text.public{opacity:1;letter-spacing:.3em;color:var(--text-faint);font-size:11px}.sc-img-text.secret{opacity:0;font-family:var(--serif);color:#c1904f26;font-size:40px;transform:scale(.9)}.sc-card:hover .sc-image, .sc-card.active .sc-image{background:#14161399;border-color:#c1904f66}.sc-card:hover .sc-img-text.public, .sc-card.active .sc-img-text.public{opacity:0;transform:scale(1.1)}.sc-card:hover .sc-img-text.secret, .sc-card.active .sc-img-text.secret{opacity:1;transform:scale(1)}.sc-info h4{color:#f2ede1;margin-bottom:8px;font-size:18px;transition:color .4s}.sc-card:hover .sc-info h4, .sc-card.active .sc-info h4{color:var(--gold)}.sc-role-wrap{height:18px;position:relative}.sc-role{color:var(--text-dim);white-space:nowrap;font-size:12.5px;transition:opacity .5s,transform .5s cubic-bezier(.2,0,0,1);position:absolute;top:0;left:0}.sc-role.public{opacity:1;transform:translateY(0)}.sc-role.secret{opacity:0;color:var(--gold);transform:translateY(8px)}.sc-card:hover .sc-role.public, .sc-card.active .sc-role.public{opacity:0;transform:translateY(-8px)}.sc-card:hover .sc-role.secret, .sc-card.active .sc-role.secret{opacity:1;transform:translateY(0)}#map .map-wrap{z-index:10;border:1px solid #ffffff0f;max-width:960px;height:520px;margin:0 auto;position:relative;overflow:hidden;padding:0!important}.leaflet-container img{max-width:none!important}.minimal-marker{background:var(--gold);border-radius:50%;width:14px;height:14px;margin-top:-7px;margin-left:-7px;box-shadow:0 0 0 3px #fff,0 2px 6px #00000080}.minimal-marker.w-city{background:var(--ink-bright)}.minimal-marker.taeoh{background:#5c8a76}.minimal-marker.muyoung{background:#333}.custom-pin { background: transparent; border: none; }.leaflet-tooltip.map-tooltip{border:1px solid var(--gold);color:#333;font-family:var(--sans);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);white-space:normal;background:#fffffff2;border-radius:6px;width:max-content;max-width:320px;padding:12px 16px;font-size:14px;line-height:1.45;box-shadow:0 6px 20px #0000003a}.leaflet-tooltip.map-tooltip b{color:var(--gold);font-family:var(--serif-head);margin-bottom:6px;font-size:16px;display:block}.leaflet-tooltip-top:before{border-top-color:var(--gold)}#modal-overlay{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:500;background:#060705d1;justify-content:center;align-items:flex-start;padding:80px 20px;display:none;position:fixed;inset:0;overflow-y:auto}#modal-overlay.open{display:flex}#modal{-webkit-backdrop-filter:blur(16px);background:#12140d99;width:100%;max-width:640px;margin-top:20px;padding:48px;position:relative}#modal-close{color:var(--text-dim);cursor:pointer;background:0 0;border:none;font-size:22px;line-height:1;position:absolute;top:20px;right:24px}#modal-close:hover{color:var(--ink-bright)}#modal .m-eyebrow{letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;font-size:12px}#modal h3{color:#f4efe3;border-bottom:1px solid var(--line-soft);margin-bottom:32px;padding-bottom:22px;font-size:32px}#modal .m-section{margin-bottom:28px}#modal .m-section:last-child{margin-bottom:0}#modal .m-sec-title{color:var(--gold);font-size:13px;font-family:var(--serif-head);letter-spacing:.1em;border-bottom:1px solid #c1904f33;margin-bottom:12px;padding-bottom:6px;display:inline-block}#modal .m-desc{color:var(--text-dim);font-size:14.5px;line-height:1.7}#modal .m-feat{flex-direction:column;gap:8px;display:flex}#modal .m-feat li{color:var(--text-dim);padding-left:16px;font-size:14px;list-style:none;position:relative}#modal .m-feat li:before{content:"—";color:var(--ink-bright);position:absolute;left:0}footer{text-align:center;color:var(--text-faint);letter-spacing:.1em;padding:60px 0 40px;font-size:12px}footer .hz{font-family:var(--serif);color:var(--text-faint);margin-bottom:14px;font-size:22px;display:block}@media (max-width:900px){
+    .hero-title { font-size: 64px !important; letter-spacing: 0px !important; }
+    .hero-title-wrapper { transform: scale(0.85); }
+    #map .map-wrap { height: 400px; }
+  .char-portrait img{position:relative!important;width:231px!important;height:340px!important;object-fit:cover!important;object-position:center top!important;transform:none!important;margin:0 auto;display:block}.nav-links{z-index:150;background:#090a07f7;flex-direction:column;align-items:flex-start;gap:4px;padding:30px 28px;transition:transform .35s;position:fixed;inset:76px 0 0;transform:translate(100%)}.nav-links.open{transform:translate(0)}.nav-links a{border-bottom:1px solid var(--line-soft);flex-direction:row;align-items:baseline;gap:12px;width:100%;padding:16px 4px}.nav-links a .kr{font-size:13px}.nav-links a .hz{font-size:18px}.nav-links a.active:after{display:none}.hamburger{display:flex}#bgm{display:none}.grid-4{grid-template-columns:repeat(2,1fr)}.char-feature{grid-template-columns:1fr;gap:0}.sc-grid{grid-template-columns:repeat(2,1fr);gap:16px}.places-grid{grid-template-columns:1fr}.char-portrait{height:auto;min-height:auto;padding-top:40px;padding-bottom:10px}.char-info{padding:28px 24px}section{padding:100px 0 80px}.cs-row{flex-direction:column;min-height:auto}.cs-floor{border-bottom:1px dashed #ffffff0a;border-right:none;justify-content:flex-start;width:100%;padding:16px}.cs-places{padding:24px}}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}
+  @media (hover: none) and (pointer: coarse) { body, a, button, .sc-card, .cs-box.interactive { cursor: auto !important; }  }  .hanja-sub { font-size: 0.65em; color: rgba(193, 144, 79, 0.6); margin-left: 2px; font-weight: 400; font-family: var(--serif); }
+    .hide-scroll::-webkit-scrollbar { display: none; }
+</style>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap');
+    
+    .hero-title {
+      font-family: 'Source Han Serif Heavy', 'Noto Serif TC', serif !important;
+      font-size: 105px !important;
+      color: #F2F0E2 !important;
+      letter-spacing: -2px !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 1px #F2F0E2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <div class="brand">九龍</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#world" class="nav-a"><span class="hz">世界觀</span><span class="kr">세계관</span></a>
+        <a href="#faction" class="nav-a"><span class="hz">組織</span><span class="kr">조직</span></a>
+        <a href="#characters" class="nav-a"><span class="hz">人物</span><span class="kr">인물</span></a>
+        <a href="#map" class="nav-a"><span class="hz">地圖</span><span class="kr">지도</span></a>
+      </div>
+      <div class="nav-right">
+        
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="메뉴">
+          <span></span><span></span><span></span>
+       
+         </button>
+      </div>
+    </div>
+  </nav>
+  
+
+  <section id="main">
+    <div class="hero-bg">
+      <svg viewBox="0 0 1600 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#0d0f10">
+          <rect x="0" y="220" width="70" height="280"/><rect x="60" y="160" width="90" height="340"/><rect x="140" y="260" width="60" height="240"/><rect x="195" y="120" width="50" height="380"/><rect x="240" y="200" width="80" height="300"/><rect x="315" y="90" width="46" height="410"/><rect x="356" y="230" width="100" height="270"/><rect x="450" y="150" width="60" height="350"/><rect x="505" y="260" width="90" height="240"/><rect x="590" y="60" width="54" height="440"/><rect x="638" y="200" width="120" height="300"/><rect x="750" y="140" width="70" height="360"/><rect x="815" y="240" width="90" height="260"/><rect x="900" y="100" width="52" height="400"/><rect x="946" y="220" width="110" height="280"/><rect x="1050" y="170" width="64" height="330"/><rect x="1108" y="80" width="48" height="420"/><rect x="1150" y="250" width="100" height="250"/><rect x="1245" y="150" width="70" height="350"/><rect x="1310" y="240" width="90" height="260"/><rect x="1395" y="110" width="55" height="390"/><rect x="1445" y="220" width="100" height="280"/><rect x="1540" y="180" width="60" height="320"/>
+        </g>
+        <g fill="#161816">
+          <rect x="30" y="260" width="20" height="240"/><rect x="230" y="230" width="18" height="270"/><rect x="470" y="190" width="16" height="310"/><rect x="700" y="230" width="20" height="270"/><rect x="960" y="250" width="18" height="250"/><rect x="1200" y="280" width="16" height="220"/><rect x="1420" y="240" width="20" height="260"/>
+        </g>
+        <g fill="#c1904f" opacity="0.5">
+          <rect x="80" y="200" width="4" height="6"/><rect x="80" y="230" width="4" height="6"/><rect x="205" y="160" width="4" height="6"/><rect x="205" y="300" width="4" height="6"/><rect x="330" y="140" width="4" height="6"/><rect x="330" y="320" width="4" height="6"/><rect x="470" y="200" width="4" height="6"/><rect x="605" y="120" width="4" height="6"/><rect x="605" y="260" width="4" height="6"/><rect x="770" y="200" width="4" height="6"/><rect x="915" y="160" width="4" height="6"/><rect x="915" y="300" width="4" height="6"/><rect x="1120" y="140" width="4" height="6"/><rect x="1260" y="200" width="4" height="6"/><rect x="1410" y="180" width="4" height="6"/><rect x="1560" y="230" width="4" height="6"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-fog"></div>
+    <div class="rain"></div>
+    <div class="hero-content wrap">
+      <div class="hero-year">1990 · 香港 · 九龍城寨</div>
+      <div class="hero-title-wrapper">
+        <h1 class="hero-title">九龍哀歌</h1>
+      </div>
+      <p class="hero-sub">끝을 앞둔 계절, 우리가 머물던 도시</p>
+      <div class="scroll-hint"><span>下</span></div>
+    </div>
+  </section>
+  <section id="world">
+    <div class="wrap">
+    
+      <div class="eyebrow">世界觀 · 세계관</div>
+      <h2 class="section-title">1997년, 그 이전의 홍콩</h2>
+      <p class="desc">법보다 <b>암묵적인 규칙</b>이 우선하는 거대한 무법지대. 돈과 정보, 권력이 골목 사이를 끊임없이 오가고 수많은 사람들이 저마다의 방식으로 살아남는다.</p>
+      <p class="desc">성채를 나눠 가진 <b>다섯 조직</b>이 각자의 영역을 지키고 있는 구룡성채의 시간은, 반환을 코앞에 둔 채로 여전히 흐르고 있다.</p>
+      <p class="desc">누구도 이곳의 온전한 지도를 그리지 못한다. 위로 쌓이고 옆으로 이어진 건물들 사이, 햇빛이 닿지 않는 골목마다 각자의 질서가 있을 뿐이다.</p>
+
+      <div class="fact-grid edge-top">
+        <div class="fact">
+          <div class="label">時代</div>
+          <div class="value">1990s<br/>혼란의 시대</div>
+        </div>
+        <div class="fact">
+          <div class="label">背景</div>
+          <div class="value">홍콩<br/>무법과 회색지대</div>
+       
+         </div>
+        <div class="fact">
+          <div class="label">體裁</div>
+          <div class="value">느와르 · 로맨스<br/>현대</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faction">
+    <div class="wrap">
+      <div class="eyebrow">組織 · 조직</div>
+      <h2 class="section-title">조직</h2>
+      <div class="org-grid edge-top">
+        
+        <div class="faction-card">
+          <h4><span class="hz">信義衛</span> 신의위</h4>
+          <p>빛과 어둠의 경계를 허물며 빠르게 세를 불리는 신흥 조직. 낡은 규칙을 부수고 새로운 질서를 세우려 한다.</p>
+        </div>
+        <div class="faction-card">
+          <h4><span class="hz">和龍會</span> 화룡회</h4>
+          <p>성채의 꼭대기에서 오랜 전통과 규율을 수호하는 구조직. 피로 쓰인 과거의 영광을 여전히 쥐고 있다.</p>
+        </div>
+        <div class="faction-card">
+          <h4><span class="hz">聽音閣</span> 청음각</h4>
+          <p>모든 은밀한 대화가 모이고 흩어지는 정보의 교차로. 누구의 편에도 서지 않으나, 모두가 이곳을 찾는다.</p>
+        </div>
+        <div class="faction-card">
+          <h4><span class="hz">狐影館</span> 호영관</h4>
+          <p>피비린내 나는 조직 다툼 속에서도 총성이 허락되지 않는 유일한 중립지. 어둠 속의 위태로운 평화를 유지한다.</p>
+        </div>
+        <div class="faction-card dim">
+          <h4><span class="hz">三合會</span> 삼합회</h4>
+          <p>성채의 담장을 넘어 홍콩 전역에 그림자를 드리운 거대 조직. 안팎의 경계를 위협하는 절대적인 외부의 힘.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="characters">
+    <div class="wrap">
+      <div class="eyebrow">人物 · 인물</div>
+
+      <div class="char-feature">
+        <div class="char-portrait">
+          <img src="https://raw.githubusercontent.com/Jiln00/F/main/%EC%A7%84%ED%83%9C%EC%98%A4.png" alt="진태오" style="position: absolute; inset: 0; width: 341px; height: 440px; object-fit: cover; object-position: top; box-sizing: border-box; opacity: 1; z-index: 1; transform-origin: top center; transform: scale(1.15);" />
+     
+         </div>
+        <div class="char-info hide-scroll" style="background: linear-gradient(90deg, transparent 0%, var(--panel) 8%, var(--panel) 100%); height: 500px; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;">
+          <h3 class="char-name" style="font-family: var(--serif-head); font-weight: 800; font-size: 38px; margin-bottom: 12px;">진태오</h3>
+          <div class="char-role" style="color: var(--text-dim); letter-spacing: 0.05em; font-size: 13.5px; font-weight: bold; margin-bottom: 40px; display: flex; align-items: center;">
+            신의위 <span style="color: var(--text-faint); margin: 0 6px;">·</span> <span class="role-hover-swap"><span class="role-default" style="color: #93754b;">후계자</span><span class="role-hover">버려진 패</span></span>
+          </div>
+          
+          <div class="char-meta" style="gap: 36px; margin-bottom: 48px;">
+            <div style="font-size: 12.5px;">나이<b style="font-family: var(--serif); font-size: 17px; font-weight: normal; color: #f2ede1;">29</b></div>
+            <div style="font-size: 12.5px;">성별<b style="font-family: var(--serif); font-size: 17px; font-weight: normal; color: #f2ede1;">남</b></div>
+            <div style="font-size: 12.5px;">키<b style="font-family: var(--serif); font-size: 17px; font-weight: normal; color: #f2ede1;">188cm</b></div>
+            <div style="font-size: 12.5px;">출신<b style="font-family: var(--serif); font-size: 17px; font-weight: normal; color: #f2ede1;">구룡성채</b></div>
+            <div style="font-size: 12.5px;">별명<b style="font-family: var(--serif); font-size: 17px; font-weight: normal; color: #f2ede1;">신의위의 개</b></div>
+          </div>
+          
+          <div class="char-detail-section">
+            <h4 class="detail-title">성격</h4>
+            <div class="detail-boxes">
+              <span class="d-box">느긋함</span>
+              <span class="d-box">여유로움</span>
+           
+               <span class="d-box">능글맞음</span>
+              <span class="d-box">서투른 감정표현</span>
+              <span class="d-box">철저한 가면</span>
+            </div>
+          </div>
+
+          <div class="char-section-divider"></div>
+
+          <div class="char-detail-section">
+            <h4 class="detail-title">인물 소개</h4>
+      
+             <p class="detail-desc">가볍게 묶은 흑발과 회안, 날렵한 눈매. 검은색나시와 가죽자켓, 녹색 선글라스 쓰고 있다. 양 가슴과 팔까지 이어지는 문신이 있고 멍과 흉터가 가득하다. 실없는 농담과 미소 뒤 가려진 진짜 속내는 누구도 알지 못한다.</p>
+          </div>
+
+          <div class="char-section-divider"></div>
+
+          <div class="char-detail-section">
+            <h4 class="detail-title">특징</h4>
+            <div class="detail-boxes">
+     
+               <span class="d-box">입양아</span>
+              <span class="d-box">탄탄한 체격</span>
+              <span class="d-box">비릿한 쇠 & 소독약 냄새</span>
+            </div>
+          </div>
+
+          <div class="char-detail-section" style="margin-top: 54px;">
+            <h4 class="detail-title">호<span class="hanja-sub">好</span></h4>
+       
+             <div class="detail-boxes">
+              <span class="d-box">독주 (백주·오가피주)</span>
+              <span class="d-box">담배 (말보로)</span>
+              <span class="d-box">운동</span>
+            </div>
+          </div>
+
+          <div class="char-detail-section" style="margin-top: 54px;">
+            
+ <h4 class="detail-title">불호<span class="hanja-sub">不</span></h4>
+            <div class="detail-boxes">
+              <span class="d-box">소음</span>
+              <span class="d-box">단 음식</span>
+              <span class="d-box">아편·마약</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+       <div class="sc-grid edge-top" style="padding-top: 50px;">
+        <div class="sc-card" data-char="jinmuyoung">
+          <div class="sc-image">
+            <img src="https://raw.githubusercontent.com/Jiln00/F/main/%EC%A7%84%EB%AC%B4%EC%98%81.png" alt="진무영" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; z-index: 1;" />
+          </div>
+          <div class="sc-info">
+            <h4>진무영 陳武英</h4>
+            <div class="sc-role-wrap">
+              <div class="sc-role public">52세 · 무역회사 [신의] 대표</div>
+              <div class="sc-role secret">52세 · 신의위 보스</div>
+            </div>
+ 
+           </div>
+        </div>
+
+        <div class="sc-card" data-char="samo">
+          <div class="sc-image">
+            <img src="https://raw.githubusercontent.com/Jiln00/F/main/%EC%82%AC%EB%AA%A8.png" alt="사모" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; z-index: 1; transform: scale(1.30); transform-origin: top center;" />
+          </div>
+          <div class="sc-info">
+            <h4>사모 師母</h4>
+            <div class="sc-role-wrap">
+              <div class="sc-role public">56세 · 전통 찻집 주인</div>
+              <div class="sc-role secret">56세 · 청음각 주인</div>
+            </div>
+ 
+           </div>
+        </div>
+
+        <div class="sc-card" data-char="juryongsan">
+          <div class="sc-image" style="border: none;">
+            <img src="https://raw.githubusercontent.com/Jiln00/F/main/%EC%A3%BC%EB%A3%A1%EC%82%B0.png" alt="주룡산" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; z-index: 1; transform: scale(1.15); transform-origin: top center;" />
+          </div>
+          <div class="sc-info">
+   
+             <h4>주룡산 朱龍山</h4>
+            <div class="sc-role-wrap">
+              <div class="sc-role public">64세 · 지역 상인회 원로</div>
+              <div class="sc-role secret">64세 · 화룡회 룡두</div>
+            </div>
+          </div>
+        </div>
+
+        
+ <div class="sc-card" data-char="munshinwol">
+          <div class="sc-image" style="border: none;">
+            <img src="https://raw.githubusercontent.com/Jiln00/F/main/%EB%AC%B8%EC%8B%A0%EC%9B%94%20(2).png" alt="문신월" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; z-index: 1; transform: scale(1.15); transform-origin: top center;" />
+          </div>
+          <div class="sc-info">
+            <h4>문신월 文信月</h4>
+            <div class="sc-role-wrap">
+  
+               <div class="sc-role public">47세 · 프라이빗 클럽 지배인</div>
+              <div class="sc-role secret">47세 · 호영관 관주</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="places" style="padding-top: 60px;">
+    <div class="wrap">
+      <h2 class="section-title" style="font-size: 32px;">주요 장소</h2>
+  
+       <div class="places-grid edge-top">
+        <div class="place-card">
+          <h4><span class="hz">書店</span> 서점</h4>
+          <p>낡은 종이냄새와 묵향이 짙게 공존하는 공간, 책 거래와 다양한 소문이 오가는 장소</p>
+        </div>
+        <div class="place-card">
+          <h4><span class="hz">洗濯所</span> 세탁소</h4>
+          <p>증기와 기계 소리가 가득한 곳, 옷 세탁 이외 다른 것도 세탁되며 소문이 빠르다</p>
+ 
+         </div>
+        <div class="place-card">
+          <h4><span class="hz">金銀房</span> 금은방</h4>
+          <p>때로 전당포의 역할도 수행하며 가치있는 것만을 취급하고 있다</p>
+        </div>
+        <div class="place-card">
+          <h4><span class="hz">食堂</span> 식당</h4>
+          <p>06:00부터 22:00 운영 / 사람이 많이 오가는 곳이자 태오가 주로 머무는 장소</p>
+     
+         </div>
+        <div class="place-card">
+          <h4><span class="hz">診療所</span> 진료소</h4>
+          <p>성채 내 안전지대 암묵적인 룰에 따라 어떤 싸움도 허용되지 않는다</p>
+        </div>
+        <div class="place-card">
+          <h4><span class="hz">酒店</span> 주점</h4>
+          <p>겉보기에 평범해 보이는 주점이지만, 온갖 소문의 발원지이자 집결지. 낮과 밤의 경계가 흐릿하게 섞여든다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cross-section">
+    <div class="wrap">
+      <div class="eyebrow">地圖 · 지도</div>
+      <h2 class="section-title">지도 — 성채 단면도</h2>
+      <p class="section-lead">구룡성채는 끝없이 덧대어진 거대한 하나의 생물과 같다. 층과 층 사이, 빛이 닿지 않는 계단과 비좁은 골목마다 각자의 생존 방식이 얽혀 사람들을 잇는다.</p>
+
+      <div class="cs-board edge-top">
+        <div class="cs-row">
+          <div class="cs-floor">4~5F</div>
+          <div class="cs-places">
+            <div class="cs-box interactive">
+              <div class="cs-box-default"><span class="hz">和龍會</span> 화룡회 사무실</div>
+              <div class="cs-box-hover">마약 중개·마작방운영·자금세탁</div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-row">
+          <div class="cs-floor">3F</div>
+          <div class="cs-places">
+            <div class="cs-box interactive">
+              <div class="cs-box-default"><span class="hz">信義衛</span> 신의위 작업실</div>
+      
+               <div class="cs-box-hover">자금세탁·채무·고리대금</div>
+            </div>
+            <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">麻雀房</span> 마작방</div>
+            </div>
+            <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">食堂</span> 식당</div>
+       
+             </div>
+          </div>
+        </div>
+        <div class="cs-row">
+          <div class="cs-floor">2F</div>
+          <div class="cs-places">
+            <div class="cs-box interactive">
+              <div class="cs-box-default"><span class="hz">信義衛</span> 신의위 사무실</div>
+              
+ <div class="cs-box-hover">보안 컨설팅·경호·토지개발</div>
+            </div>
+            <div class="cs-box interactive">
+              <div class="cs-box-default"><span class="hz">聽音閣</span> 청음각</div>
+              <div class="cs-box-hover">오래된 찻집·정보거래·중개·신변보호</div>
+            </div>
+            <div class="cs-box">
+              
+ <div class="cs-box-default"><span class="hz">診療所</span> 진료소</div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-row">
+          <div class="cs-floor">1F / G</div>
+          <div class="cs-places">
+            <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">書店</span> 서점</div>
+    
+             </div>
+            <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">洗濯所</span> 세탁소</div>
+            </div>
+            <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">酒店</span> 주점</div>
+            </div>
+        
+             <div class="cs-box">
+              <div class="cs-box-default"><span class="hz">金銀房</span> 금은방</div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-row">
+          <div class="cs-floor">B1</div>
+          <div class="cs-places">
+            <div class="cs-box interactive">
+   
+               <div class="cs-box-default"><span class="hz">狐影館</span> 호영관</div>
+              <div class="cs-box-hover">회원제주점·정보거래·회담장소</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="map">
+    <div class="wrap">
+      <div 
+ class="eyebrow">地圖 · 지도</div>
+      <h2 class="section-title">지도</h2>
+      <p class="section-lead">1990년 홍콩, 구룡(Kowloon) 지역. 서로 다른 경계와 구역이 공존하는 곳.</p>
+      <div class="map-wrap glass edge-top" id="real-map">
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="hz">九龍城寨</span>
+    1990, 홍콩 — 반환을 앞둔 마지막 무질서
+  </footer>
+
+  <div id="modal-overlay">
+    <div id="modal" class="edge-top">
+      <button id="modal-close">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"><div class="circle"></div></div>
+  <script>
+    const CHAR_DATA = {
+      jinmuyoung: {
+        eyebrow: '信義衛 · 보스',
+        name: '진무영 陳武英',
+        role: '신의위 보스',
+        kw: ['냉혹한 야심가', '치밀함', '압도적 카리스마', '피도 눈물도 없는 실용주의'],
+        desc: '말끔하게 빗어 넘긴 은발, 날카로운 인상. 평소에는 다도와 난을 즐기지만 적에게는 자비가 없다.',
+        feat: ['신흥조직 신의위의 설립자', '전략가', '구룡성채 출신 아님'],
+        org: '성채 밖을 근거지로 빠르게 세를 불리는 신흥 세력 [신의위]. 낡은 규칙을 부수고 새로운 질서를 세우려 한다.'
+      },
+      samo: {
+        eyebrow: '聽音閣 · 주인',
+        name: '사모 師母',
+        role: '전통 찻집 주인',
+        kw: ['온화함 속 빈틈없음', '침묵', '가치 판단'],
+        desc: '성채에서 50년을 살아온 여자. 본명도, 과거도 아는 이가 없다. 묻는 말엔 늘 값부터 매긴다.',
+        feat: ['본명을 포함해 알려진 정보가 없다', '언제나 사모 라는 호칭으로만 불린다'],
+        org: '모든 은밀한 대화가 모이고 흩어지는 정보의 교차로 [청음각]. 찻집으로 위장한 정보망으로 어느 편에도 서지 않는다.'
+      },
+      juryongsan: {
+        eyebrow: '和龍會 · 용두',
+        name: '주룡산 朱龍山',
+        role: '화룡회 룡두',
+        kw: ['보수적', '원칙주의', '강한 책임감', '권위 의식', '온화함', '냉혹함'],
+        desc: '희끗한 백발과 단정한 당복 차림. 온화한 눈빛과 달리 오래된 전통과 원칙을 무엇보다 중히 여기며, 오래된 전통과 원칙을 자신의 삶처럼 지켜낸다',
+        feat: ['규율중시', '성채 밖 외출 적음', '홍문 애독', '<span class="role-hover-swap" style="display: inline-grid; place-items: center;"><span class="role-default" style="grid-area: 1/1;">원칙 속 예외</span><span class="role-hover" style="grid-area: 1/1; position: static; color: var(--gold);">태오를 유일하게 신뢰한다.</span></span>'],
+        org: '성채의 꼭대기에서 오랜 전통과 규율을 수호하는 구세력 [화룡회]. 피로 쓰인 과거의 영광을 여전히 쥐고 있다.'
+      },
+      munshinwol: {
+        eyebrow: '狐影館 · 관주',
+        name: '문신월 文信月',
+        role: '호영관 관주',
+        kw: ['유보적 태도', '신중함', '모호한 미소', '예측불가'],
+        desc: '초록빛 장발과 은테 안경, 단정한 셔츠 차림으로 늘 미소를 띤 채 사람을 맞이한다. 온화한 인상과 달리 속내를 좀처럼 드러내지 않으며, 한번 내린 결정은 결코 번복하지 않는다.',
+        feat: ['본명·출신 불명', '중재자', '호영관의 관주']
+      }
+    };
+
+    // 1. Custom Cursor Logic
+    const dot = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+    let animationFrameId;
+
+    const onMouseMove = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+    const onTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
+      }
+    };
+    window.addEventListener('touchmove', onTouchMove);
+    window.addEventListener('touchstart', onTouchMove);
+
+    const animateCursor = () => {
+      if (dot) dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      
+      const dx = mouseX - ringX;
+      const dy = mouseY - ringY;
+      ringX += dx * 0.15;
+      ringY += dy * 0.15;
+      
+      if (ring) ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+      
+      animationFrameId = requestAnimationFrame(animateCursor);
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    animateCursor();
+
+    const handleMouseOver = (e) => {
+      if (e.target.closest('a, button, .sc-card, .cs-box.interactive')) {
+        document.body.classList.add('cursor-hover');
+      } else {
+        document.body.classList.remove('cursor-hover');
+      }
+    };
+    window.addEventListener('mouseover', handleMouseOver);
+
+    // 2. Map Initialization Logic
+    const mapContainer = document.getElementById('real-map');
+    if (mapContainer && typeof L !== 'undefined') {
+      const map = L.map('real-map', {
+        minZoom: 14,
+        maxZoom: 18,
+        scrollWheelZoom: true,
+        maxBounds: [[22.295, 114.150], [22.360, 114.220]],
+        maxBoundsViscosity: 1.0
+      }).setView([22.329, 114.183], 14);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+      }).addTo(map);
+
+      const createPin = (fill, stroke) => {
+        const svg = `<svg width="18" height="24" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12C2 21 12 30 12 30C12 30 22 21 22 12C22 6.477 17.523 2 12 2ZM12 17C9.239 17 7 14.761 7 12C7 9.239 9.239 7 12 7C14.761 7 17 9.239 17 12C17 14.761 14.761 17 12 17Z" fill="${fill}" stroke="${stroke}" stroke-width="2.5" opacity="0.85"/>
+          <circle cx="12" cy="12" r="5" fill="#FFFFFF" opacity="0.9"/>
+        </svg>`;
+        return L.divIcon({ className: 'custom-pin', html: svg, iconSize: [18, 24], iconAnchor: [9, 24] });
+      };
+
+      L.marker([22.332, 114.190], {icon: createPin('#2a2c2a', '#111111')}).addTo(map)
+        .bindTooltip("<b>구룡성채 (Kowloon Walled City)</b><br>무법의 심장. 빛과 어둠이 교차하는 미로 같은 공간.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+      L.marker([22.327, 114.186], {icon: createPin('#5c8a76', '#35594b')}).addTo(map)
+        .bindTooltip("<b>진태오 거주지 (Prince Edward Rd West)</b><br>성채와 인접한 곳에 위치한 깔끔하고 정돈된 프라이빗 고급 아파트.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+      L.marker([22.325, 114.176], {icon: createPin('#4a4a4a', '#222222')}).addTo(map)
+        .bindTooltip("<b>진무영 저택 (Kadoorie Hill)</b><br>구룡성채 남서쪽, 가도리 힐(Kadoorie Hill)의 폐쇄적이고 삼엄한 최고급 저택.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.328, 114.197], {icon: createPin('#6c86a6', '#41556e')}).addTo(map)
+        .bindTooltip("<b>카이탁 공항 (Kai Tak Airport)</b><br>머리 위로 스칠 듯 낮게 나는 비행기로 유명했던 90년대 홍콩의 관문.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+        
+      L.marker([22.319, 114.170], {icon: createPin('#a86868', '#733e3e')}).addTo(map)
+        .bindTooltip("<b>레이디스 마켓 (Ladies Market)</b><br>몽콕의 네온사인과 인파가 가득한 상점가. 불법 장물과 모조품이 은밀히 오간다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+        
+      L.marker([22.342, 114.193], {icon: createPin('#b59860', '#7a643b')}).addTo(map)
+        .bindTooltip("<b>황대선사 (Wong Tai Sin Temple)</b><br>현지인들의 기원과 향 연기가 끊이지 않는 도교 사원.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+        
+      L.marker([22.326, 114.173], {icon: createPin('#83a663', '#516b38')}).addTo(map)
+        .bindTooltip("<b>원포 스트리트 새 공원 (Yuen Po Street Bird Garden)</b><br>새장을 든 노인들이 모이는 곳. 이면에서는 정보 상인들의 접선지로 쓰인다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+        
+      L.marker([22.324, 114.189], {icon: createPin('#629c95', '#39615c')}).addTo(map)
+        .bindTooltip("<b>송왕대 공원 (Sung Wong Toi Park)</b><br>구룡성 근처의 역사적인 공원. 성채의 소란스러움을 피할 수 있는 몇 안 되는 정적의 공간.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.308, 114.170], {icon: createPin('#a8809f', '#73526c')}).addTo(map)
+        .bindTooltip("<b>템플 스트리트 야시장 (Temple Street Night Market)</b><br>네온사인 불빛 아래 온갖 잡동사니와 길거리 음식이 넘쳐나는 야시장.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.338, 114.187], {icon: createPin('#c7925e', '#8a5f36')}).addTo(map)
+        .bindTooltip("<b>록푸 역 (Lok Fu MTR Station)</b><br>구룡성을 오가는 사람들이 주로 이용하는 지하철역. 퇴근 시간마다 인파로 붐빈다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.330, 114.189], {icon: createPin('#8592ad', '#535d75')}).addTo(map)
+        .bindTooltip("<b>구룡성 광장 (Kowloon City Plaza)</b><br>90년대 초 문을 연 대형 쇼핑몰. 성채 밖 사람들의 소비와 일상을 엿볼 수 있다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.336, 114.204], {icon: createPin('#9f78bf', '#674782')}).addTo(map)
+        .bindTooltip("<b>초이훙 아파트 (Choi Hung Estate)</b><br>무지개색 외벽으로 유명한 거대한 서민 주거 단지. 홍콩 특유의 밀집된 삶을 보여준다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.330, 114.191], {icon: createPin('#aba468', '#757041')}).addTo(map)
+        .bindTooltip("<b>구룡성 시장 (Kowloon City Market)</b><br>식자재와 잡화를 파는 거대한 재래시장. 성채 사람들도 식량을 구하러 자주 들른다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+      L.marker([22.336, 114.176], {icon: createPin('#788c76', '#4d614b')}).addTo(map)
+        .bindTooltip("<b>구룡통 (Kowloon Tong)</b><br>구룡성채 서쪽의 저밀도 주택가. 성채의 번잡함과는 거리가 먼 고요한 동네.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+      L.marker([22.316, 114.188], {icon: createPin('#8c6b63', '#5c4039')}).addTo(map)
+        .bindTooltip("<b>토콰완 (To Kwa Wan)</b><br>구룡성채 남쪽의 인구 밀집 주거지. 공장과 낡은 아파트가 빽빽하게 들어서 있다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+      L.marker([22.316, 114.179], {icon: createPin('#6b788c', '#435063')}).addTo(map)
+        .bindTooltip("<b>호만틴 (Ho Man Tin)</b><br>구룡반도 언덕 지대에 위치한 조용한 주거 구역. 학교와 공공 주택이 섞여 있다.", {direction: 'top', offset: [0, -12], className: 'map-tooltip'});
+
+    }
+
+    // 3. Modal Logic
+    const overlay = document.getElementById('modal-overlay');
+    const content = document.getElementById('modal-content');
+    const closeBtn = document.getElementById('modal-close');
+
+    const openModal = (key) => {
+      const d = CHAR_DATA[key];
+      if (!d || !content || !overlay) return;
+      
+      const kwHtml = d.kw.map(k => `<span class="d-box">${k}</span>`).join('');
+      const featHtml = d.feat.map(f => `<span class="d-box">${f}</span>`).join('');
+      
+      content.innerHTML = `
+        <div class="m-eyebrow">${d.eyebrow}</div>
+        <h3>${d.name}</h3>
+        <div class="m-section">
+          <div class="m-sec-title">성격</div>
+          <div class="detail-boxes" style="margin-bottom:0;">${kwHtml}</div>
+        </div>
+        <div class="m-section">
+          <div class="m-sec-title">인물 소개</div>
+          <p class="m-desc">${d.desc}</p>
+        </div>
+        <div class="m-section">
+          <div class="m-sec-title">특징</div>
+          <div class="detail-boxes">${featHtml}</div>
+        </div>
+        ${d.org ? `<div class="m-section"><div class="m-sec-title">소속 조직</div><p class="m-desc">${d.org}</p></div>` : ''}
+      `;
+      
+      overlay.classList.add('open');
+    };
+
+    document.querySelectorAll('.sc-card[data-char]').forEach(card => {
+      const charId = card.getAttribute('data-char');
+      if (charId) card.addEventListener('click', () => openModal(charId));
+    });
+
+    closeBtn?.addEventListener('click', () => overlay.classList.remove('open'));
+    overlay?.addEventListener('click', (e) => {
+      if (e.target.id === 'modal-overlay') overlay.classList.remove('open');
+    });
+
+    // 5. Mobile Navigation Logic
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+
+    document.querySelectorAll('.nav-a').forEach(a => {
+      a.addEventListener('click', () => navLinks?.classList.remove('open'));
+    });
+
+    // 6. Scroll Active Highlight Logic
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-a');
+    
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAs.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    
+    sections.forEach(s => obs.observe(s));
+  </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.sc-card, .cs-box.interactive');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Toggle active class on tap for mobile
+      if (window.innerWidth <= 900 || window.matchMedia('(hover: none)').matches) {
+        cards.forEach(c => { if(c !== card) c.classList.remove('active'); });
+        card.classList.toggle('active');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
+
